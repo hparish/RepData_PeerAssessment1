@@ -13,8 +13,7 @@ output:
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 
-##getwd()
-##setwd("C:/Users/holly/Documents/2016/Coursera Data Science/C5 Reproducible Research/Week2/")
+
 rdat <- read.csv("./activity.csv")
 ```
 

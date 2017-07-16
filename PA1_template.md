@@ -80,7 +80,7 @@ Are there differences in activity patterns between weekdays and weekends?
     wEndOrDay <- ifelse(newdat$numdate == 6 | newdat$numdate ==0,"Weekend","Weekday")
     wdat <- cbind(newdat,wEndOrDay)
 
-    avgswe <- aggregate(steps ~ date + wEndOrDay, wdat, mean)
-    xyplot(steps ~ date | wEndOrDay, avgswe, type = 'l', layout = c(1,2),xlab = "Date", ylabel= "Avg Num of Steps")
+    avgswe <- aggregate(steps ~ interval + wEndOrDay, wdat, mean)
+    xyplot(steps ~ interval | wEndOrDay, avgswe, type = 'l', layout = c(1,2),xlab = "Interval", ylabel= "Avg Num of Steps")
 
 ![](PA1_template_files/figure-markdown_strict/unnamed-chunk-6-1.png)
